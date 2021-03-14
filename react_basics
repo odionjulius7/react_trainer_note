@@ -1,0 +1,55 @@
+          		MY REACT UNREMEMBERED FORMAT AND SYNTAX-- and
+Grepper extension
+...................................................................
+	1) . React Router
+...................................................................
+i.	to install: npm install --save react-router-dom
+ii.	call tis in the index.js: import { BrowserRouter as Router } from 'react-router-dom'; 
+iii.	and wrap it around the App component: <Router><App1 />  </Router>
+iv.	while App.js import tis: import { Switch, Route } from 'react-router-dom';
+<Switch
+  <Route exact path="/" component={ProductList}> </Route>       
+<Route path="/details" component={Details}></Route>
+       <Route path="/cart" component={Cart}>{/** cart page path */}</Route>
+</Switch>
+===Note:  {/** our home page path/ NOTE: the Exact attribute indicate that this is the home page  */}  {/* and to avoid the home page interferring in other page(the exact attribute is needed) */}  
+i.	while the component that will be linking to other page will have: 
+	<Link to="/"  className="nav-link">
+                        <li className="nav-item ml-5">
+                            products
+                        </li>
+                    </Link>
+
+...........................................................................................
+		Bootstrap in react
+.....................................................................................
+i.	install bootstrap:  npm install --save bootstrap 
+And Link to App.js
+import "bootstrap/dist/css/bootstrap.min.css";
+
+-------------------------------------------------------------
+		     Styled component syntax 
+---------------------------------------------------------------
+a.	install styled components: npm install --save styled-components
+const Button = styled.button` 
+ background: transparent;` ..Note u create a component variable and = to the styled.any html tag(e.g button)
+b.	import styled from "styled-components"; // import in where needed 
+
+
+
+.............................................................................................................................
+	how to use image/ access image that is in public folder /img folder
+		in ur object, data.js
+......................................................................................................................
+1).  In ur data.js: 
+export  const  storeProducts  =  {
+        id: 1,
+        title: "Google Pixel-Balack",
+        img: "img/shopping.png", // frm public/img folder
+        price: 10,
+        company: "GOOGLE",  
+      inCart: false,
+        count: 0,
+        total: 0
+    }
+i.	note; there is no need for link using relative path to the img. Just start with the folder
